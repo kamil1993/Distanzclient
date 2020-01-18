@@ -1,5 +1,7 @@
 package com.example.distanzclient.Gps;
 
+import java.sql.Timestamp;
+
 public class CostumLocation {
     public int teamid;
     public int trackid;
