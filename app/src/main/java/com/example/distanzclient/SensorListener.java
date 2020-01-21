@@ -37,9 +37,12 @@ public class SensorListener implements SensorEventListener {
             if (CostumLocationManager.activityG.checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && CostumLocationManager.activityG.checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                 return;
             }
-            if(noMotion)
+            if(noMotion){
                 CostumLocationManager.locManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, CostumLocationManager.distanzEingabe, CostumLocationManager.distanzSpeedLis, Looper.myLooper());
-            return;
+                noMotion = false;
+                return;
+            }
+
         }
         counter = 0;
         if(noMotion(zeds) && CostumLocationManager.distanzSpeedLis != null){

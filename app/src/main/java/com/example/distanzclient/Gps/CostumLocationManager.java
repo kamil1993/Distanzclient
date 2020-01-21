@@ -37,11 +37,11 @@ public class CostumLocationManager {
                 if (location != null) {
                     result = location;
                     if(location.getSpeed() > maxSpeedEingabe) {
-                        ausgabe.append("LocationNr."+RestManager.counter+"speed ist over : " + maxSpeedEingabe);
+                        ausgabe.append("LocationNr."+RestManager.counter+"- speed ist over : " + maxSpeedEingabe);
                         return;
                     }
                     else{
-                        ausgabe.append("LocationNr ."+RestManager.counter+" speed was over : " + maxSpeedEingabe);
+                        ausgabe.append("LocationNr ."+RestManager.counter+"- speed was over : " + maxSpeedEingabe);
                         updateLocationDistanzSpeed();
                     }
                     Toast.makeText(activityG.getApplicationContext(), "Location : " + location.getLatitude() + "\n" + location.getLongitude(), Toast.LENGTH_LONG);
