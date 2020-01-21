@@ -13,7 +13,6 @@ public class LocationAsync extends AsyncTask<Object,Integer,CostumLocation> {
     @Override
     protected CostumLocation doInBackground(Object[] params) {
         act = (AppCompatActivity) params[0];
-        loc = CostumLocationManager.costumLastLocation(act);
         return loc;
     }
     @Override

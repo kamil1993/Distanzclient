@@ -81,7 +81,7 @@ public class RestManager {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        ausgabe.append("Location gesandtmit Nummer: "+counter+", longitude: "+location.longitude+" lati:"+location.latitude+ "\n");
+                        //ausgabe.append("Location gesandtmit Nummer: "+counter+", longitude: "+location.longitude+" lati:"+location.latitude+ "\n");
                         Log.e("Location","\t Location gesandt");
                     }
                 }, new Response.ErrorListener() {
